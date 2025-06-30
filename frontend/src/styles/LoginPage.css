@@ -1,0 +1,75 @@
+/* src/styles/LoginPage.css */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9eef5;
+}
+
+.login-form {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 420px;
+  max-width: 90%;
+}
+
+.login-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #3498db;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #2980b9;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+}
+.welcome-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #f0fff4;
+  color: #2f855a;
+  border: 1px solid #c6f6d5;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

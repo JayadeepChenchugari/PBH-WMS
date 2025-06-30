@@ -1,0 +1,49 @@
+/* src/styles/NotFoundPage.css */
+/* Example: src/styles/InventoryPage.css */
+
+
+/* Updated example for InventoryPage.css */
+.content {
+  padding-top: 80px; /* for fixed header spacing */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+}
+
+
+
+.notfound-content {
+  margin-left: 200px;
+  padding: 60px;
+  text-align: center;
+  flex-grow: 1;
+  background-color: #fdfdfd;
+}
+
+.notfound-content h1 {
+  font-size: 120px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.notfound-content p {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.back-home {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-home:hover {
+  background-color: #2980b9;
+}

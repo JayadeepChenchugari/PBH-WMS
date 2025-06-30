@@ -1,0 +1,59 @@
+.dashboard-container {
+  padding-top: 80px; /* Increased from 80px to give more space */
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  background-color: #f9fafc;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-left: 6px solid #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card .emoji {
+  font-size: 34px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.card h4 {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 22px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 0;
+}

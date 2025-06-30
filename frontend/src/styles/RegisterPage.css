@@ -1,0 +1,79 @@
+/* src/styles/RegisterPage.css */
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+  padding: 20px;
+}
+
+.register-form {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 440px;
+  max-width: 95%;
+}
+
+.register-form h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  transition: border 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+  border-color: #3498db;
+  outline: none;
+  background: #fff;
+}
+
+.register-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%233498db' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2ecc71;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #27ae60;
+}
+
+.register-form p {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+}

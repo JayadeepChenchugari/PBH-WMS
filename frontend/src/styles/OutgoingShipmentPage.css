@@ -1,0 +1,54 @@
+.content {
+  padding: 30px;
+  background: #f4f6f9;
+}
+.inventory-top-space {
+  margin-top: 30px;
+}
+
+.shipment-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.shipment-form input,
+.shipment-form select {
+  flex: 1 1 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.shipment-form button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+}
+
+.shipment-table th,
+.shipment-table td {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.shipment-table th {
+  background-color: #45a045;
+  color: white;
+}

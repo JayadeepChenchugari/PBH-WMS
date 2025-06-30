@@ -1,0 +1,157 @@
+
+
+.content h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.supplier-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.supplier-form input[type="text"],
+.supplier-form input[type="email"],
+.supplier-form input[type="checkbox"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex: 1 1 200px;
+}
+
+.supplier-form label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.supplier-form button {
+  background-color: #45a045;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.supplier-form button:hover {
+  background-color: #16a085;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.suppliers-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.suppliers-table th,
+.suppliers-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.suppliers-table th {
+  background-color: #45a045;
+  color: white;
+}
+
+.suppliers-table tr:hover {
+  background-color: #f0f8f6;
+}
+
+.suppliers-table .inactive {
+  background-color: #f9eaea;
+  color: #888;
+}
+
+.suppliers-table input,
+.suppliers-table select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.suppliers-table button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.suppliers-table button:hover {
+  opacity: 0.9;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #1abc9c;
+  color: white;
+  border-color: #16a085;
+}
+
+/* Add these styles to src/styles/SuppliersPage.css */
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button.edit-btn {
+  background-color: #2980b9;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}

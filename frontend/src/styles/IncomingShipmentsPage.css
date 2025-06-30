@@ -1,0 +1,59 @@
+/* src/styles/IncomingShipmentsPage.css */
+.page-wrapper {
+  padding-top: 70px; /* height of the fixed header */
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f7f9fc;
+}
+
+.content {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background: #f4f6f9;
+}
+
+.shipment-form {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.shipment-form input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.shipment-form button {
+  background-color: #45a045;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shipments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.shipments-table th,
+.shipments-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.shipments-table th {
+  background-color: #45a045;
+  color: white;
+}
