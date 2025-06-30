@@ -19,7 +19,7 @@ const InventoryPage = () => {
   const token = localStorage.getItem("token");
 
   const fetchInventory = async () => {
-    const res = await axios.get("http://localhost:5000/api/inventory", {
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/inventory`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setInventory(res.data);
@@ -27,10 +27,10 @@ const InventoryPage = () => {
 
   const fetchData = async () => {
     const [locRes, supRes] = await Promise.all([
-      axios.get("http://localhost:5000/api/locations", {
+      axios.get(`${process.env.REACT_APP_API_URL}/api/locations`, {
         headers: { Authorization: `Bearer ${token}` },
       }),
-      axios.get("http://localhost:5000/api/suppliers", {
+      axios.get(`${process.env.REACT_APP_API_URL}/api/suppliers`, {
         headers: { Authorization: `Bearer ${token}` },
       }),
     ]);
@@ -51,7 +51,7 @@ const InventoryPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/inventory", form, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/inventory`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setForm({ name: "", sku: "", quantity: "", location: "", supplier: "" });
@@ -79,7 +79,7 @@ const InventoryPage = () => {
 
   const saveEdit = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/inventory/${editId}`, editForm, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/api/inventory/${editId}`, editForm, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEditId(null);
@@ -97,7 +97,7 @@ const InventoryPage = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this item?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/inventory/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/inventory/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchInventory();

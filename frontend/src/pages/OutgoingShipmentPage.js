@@ -12,13 +12,13 @@ const OutgoingShipmentPage = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await axios.get("http://localhost:5000/api/inventory", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/inventory`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setItems(res.data);
     };
     const fetchShipments = async () => {
-      const res = await axios.get("http://localhost:5000/api/outgoing-shipments", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/outgoing-shipments`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setShipments(res.data);
@@ -35,7 +35,7 @@ const OutgoingShipmentPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/outgoing-shipments", form, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/outgoing-shipments`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Shipment created!");

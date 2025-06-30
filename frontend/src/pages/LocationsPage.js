@@ -12,7 +12,7 @@ const LocationsPage = () => {
   const token = localStorage.getItem("token");
 
   const fetchLocations = async () => {
-    const res = await axios.get("http://localhost:5000/api/locations", {
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/locations`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setLocations(res.data);
@@ -30,11 +30,11 @@ const LocationsPage = () => {
     e.preventDefault();
     try {
       if (editMode) {
-        await axios.put(`http://localhost:5000/api/locations/${editId}`, form, {
+        await axios.put(`${process.env.REACT_APP_API_URL}/api/locations/${editId}`, form, {
           headers: { Authorization: `Bearer ${token}` },
         });
       } else {
-        await axios.post("http://localhost:5000/api/locations", form, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/locations`, form, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
@@ -60,7 +60,7 @@ const LocationsPage = () => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this location?")) return;
-    await axios.delete(`http://localhost:5000/api/locations/${id}`, {
+    await axios.delete(`${process.env.REACT_APP_API_URL}/api/locations/${editId}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     fetchLocations();

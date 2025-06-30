@@ -19,7 +19,7 @@ const DashboardPage = () => {
     const fetchStats = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:5000/api/dashboard/stats", {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/dashboard/stats`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStats(res.data);

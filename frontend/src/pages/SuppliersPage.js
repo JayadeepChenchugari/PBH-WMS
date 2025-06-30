@@ -27,7 +27,7 @@ const SuppliersPage = () => {
 
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/suppliers", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/suppliers`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuppliers(res.data);
@@ -48,7 +48,7 @@ const SuppliersPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/suppliers", form, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/suppliers`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setForm({
@@ -71,7 +71,7 @@ const SuppliersPage = () => {
     if (!window.confirm("Are you sure you want to delete this supplier?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/suppliers/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/suppliers/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchSuppliers();
@@ -92,7 +92,7 @@ const SuppliersPage = () => {
 
   const saveEdit = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/suppliers/${editId}`, editForm, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/api/suppliers/${editId}`, editForm, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEditId(null);

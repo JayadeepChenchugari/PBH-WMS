@@ -22,7 +22,7 @@ const IncomingShipmentsPage = () => {
 
   const fetchShipments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/shipments/incoming", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/shipments/incoming`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setShipments(res.data);
@@ -33,7 +33,7 @@ const IncomingShipmentsPage = () => {
 
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/suppliers", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/suppliers`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuppliers(res.data);
@@ -44,7 +44,7 @@ const IncomingShipmentsPage = () => {
 
   const fetchLocations = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/locations", {
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/locations`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setLocations(res.data);
@@ -66,7 +66,7 @@ const IncomingShipmentsPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/shipments/incoming", form, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/shipments/incoming`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setForm({ sku: "", name: "", quantity: "", supplier: "", receivedDate: "", location: "" });
