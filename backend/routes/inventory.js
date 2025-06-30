@@ -12,8 +12,8 @@ const { authenticate, authorizeRoles } = require('../middleware/authMiddleware')
 
 router.get('/', authenticate, getAllItems);
 router.get('/:id', authenticate, getItemById);
-router.post('/', authenticate, authorizeRoles('admin'), createItem);
-router.put('/:id', authenticate, authorizeRoles('admin'), updateItem);
-router.delete('/:id', authenticate, authorizeRoles('admin'), deleteItem);
+router.post('/', authenticate, authorizeRoles('admin','manager','operator'), createItem);
+router.put('/:id', authenticate, authorizeRoles('admin','manager','operator'), updateItem);
+router.delete('/:id', authenticate, authorizeRoles('admin','manager','operator'), deleteItem);
 
 module.exports = router;

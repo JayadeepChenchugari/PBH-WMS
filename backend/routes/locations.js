@@ -12,8 +12,8 @@ const { authenticate, authorizeRoles } = require('../middleware/authMiddleware')
 
 router.get('/', authenticate, getAllLocations);
 router.get('/:id', authenticate, getLocationById);
-router.post('/', authenticate, authorizeRoles('admin'), createLocation);
-router.put('/:id', authenticate, authorizeRoles('admin'), updateLocation);
-router.delete('/:id', authenticate, authorizeRoles('admin'), deleteLocation);
+router.post('/', authenticate, authorizeRoles('admin','manager'), createLocation);
+router.put('/:id', authenticate, authorizeRoles('admin','manager'), updateLocation);
+router.delete('/:id', authenticate, authorizeRoles('admin','manager'), deleteLocation);
 
 module.exports = router;
